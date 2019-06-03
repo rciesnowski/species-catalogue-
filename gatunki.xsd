@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="gatunki" type="gatunkiType"/>
+  <xs:complexType name="nazwaType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="jezyk" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="piesType">
+    <xs:sequence>
+      <xs:element name="nazwaPL">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Husky syberyjski"/>
+            <xs:enumeration value="Yorkshire terrier"/>
+            <xs:enumeration value="Airedale terrier"/>
+            <xs:enumeration value="Szpic miniaturowy"/>
+            <xs:enumeration value="Charcik włoski"/>
+            <xs:enumeration value="Chart angielski"/>
+            <xs:enumeration value="Sznaucer miniaturowy"/>
+            <xs:enumeration value="Pinczer średni"/>
+            <xs:enumeration value="Mastif tybetański"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="nazwaType" name="nazwa"/>
+      <xs:element name="masa">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="22 kg"/>
+            <xs:enumeration value="3 kg"/>
+            <xs:enumeration value="5 kg"/>
+            <xs:enumeration value="15 kg"/>
+            <xs:enumeration value="6 kg"/>
+            <xs:enumeration value="60 kg"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="wys">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="56 cm"/>
+            <xs:enumeration value="21 cm"/>
+            <xs:enumeration value="58 cm"/>
+            <xs:enumeration value="22 cm"/>
+            <xs:enumeration value="35 cm"/>
+            <xs:enumeration value="47 cm"/>
+            <xs:enumeration value="33 cm"/>
+            <xs:enumeration value="65 cm"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="pochodzenie">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Rosja"/>
+            <xs:enumeration value="Wielka Brytania"/>
+            <xs:enumeration value="Polska"/>
+            <xs:enumeration value="Włochy"/>
+            <xs:enumeration value="Niemcy"/>
+            <xs:enumeration value="Tybet"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="akc" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="pieskiType">
+    <xs:sequence>
+      <xs:element type="piesType" name="pies" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gatunkiType">
+    <xs:sequence>
+      <xs:element type="pieskiType" name="pieski"/>
+      <xs:element type="xs:string" name="węże"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='ISO-8859-2'?>
+
+<!DOCTYPE gatunki [
+        <!ELEMENT gatunki (pieski|węże)*>
+        <!ELEMENT pieski (pies)*>
+        <!ELEMENT pies (nazwaPL|nazwa|masa|wys|pochodzenie)*>
+        <!ATTLIST pies
+                akc CDATA #REQUIRED>
+        <!ELEMENT nazwaPL (#PCDATA)>
+        <!ELEMENT nazwa (#PCDATA)>
+        <!ATTLIST nazwa
+                jezyk CDATA #REQUIRED>
+        <!ELEMENT masa (#PCDATA)>
+        <!ELEMENT wys (#PCDATA)>
+        <!ELEMENT pochodzenie (#PCDATA)>
+        <!ELEMENT węże (#PCDATA)>
+        ]>
+
+<gatunki>
+    <pieski>
+        <pies akc="working">
+            <nazwaPL>Husky syberyjski</nazwaPL>
+            <nazwa jezyk="angielski">Arctic Husky</nazwa>
+            <masa>22 kg</masa>
+            <wys>56 cm</wys>
+            <pochodzenie>Rosja</pochodzenie>
+        </pies>
+        <pies akc="toy">
+            <nazwaPL>Yorkshire terrier</nazwaPL>
+            <nazwa jezyk="angielski">Yorkshire terrier</nazwa>
+            <masa>3 kg</masa>
+            <wys>21 cm</wys>
+            <pochodzenie>Wielka Brytania</pochodzenie>
+        </pies>
+        <pies akc="terrier">
+            <nazwaPL>Airedale terrier</nazwaPL>
+            <nazwa jezyk="angielski">Airedale terrier</nazwa>
+            <masa>22 kg</masa>
+            <wys>58 cm</wys>
+            <pochodzenie>Wielka Brytania</pochodzenie>
+        </pies>
+        <pies akc="toy">
+            <nazwaPL>Szpic miniaturowy</nazwaPL>
+            <nazwa jezyk="angielski">Pomeranian</nazwa>
+            <masa>3 kg</masa>
+            <wys>22 cm</wys>
+            <pochodzenie>Polska</pochodzenie>
+        </pies>
+        <pies akc="toy">
+            <nazwaPL>Charcik włoski</nazwaPL>
+            <nazwa jezyk="włoski">Piccolo Levriero Italiano</nazwa>
+            <masa>5 kg</masa>
+            <wys>35 cm</wys>
+            <pochodzenie>Włochy</pochodzenie>
+        </pies>
+        <pies akc="hound">
+            <nazwaPL>Chart angielski</nazwaPL>
+            <nazwa jezyk="angielski">Whippet</nazwa>
+            <masa>15 kg</masa>
+            <wys>47 cm</wys>
+            <pochodzenie>Wielka Brytania</pochodzenie>
+        </pies>
+        <pies akc="terrie">
+            <nazwaPL>Sznaucer miniaturowy</nazwaPL>
+            <nazwa jezyk="niemiecki">Zwergschnauzer</nazwa>
+            <masa>6 kg</masa>
+            <wys>33 cm</wys>
+            <pochodzenie>Niemcy</pochodzenie>
+        </pies>
+        <pies akc="working">
+            <nazwaPL>Pinczer średni</nazwaPL>
+            <nazwa jezyk="niemiecki">Pinscher</nazwa>
+            <masa>15 kg</masa>
+            <wys>47 cm</wys>
+            <pochodzenie>Niemcy</pochodzenie>
+        </pies>
+        <pies akc="working">
+            <nazwaPL>Mastif tybetański</nazwaPL>
+            <nazwa jezyk="tybetański">Do-khyi</nazwa>
+            <masa>60 kg</masa>
+            <wys>65 cm</wys>
+            <pochodzenie>Tybet</pochodzenie>
+        </pies>
+    </pieski>
+    <węże>
+
+    </węże>
+</gatunki>
