@@ -81,6 +81,48 @@
             <wys>65 cm</wys>
             <pochodzenie>Tybet</pochodzenie>
         </pies>
+        <pies akc="herding">
+            <nazwaPL>Owczarek francuski briard</nazwaPL>
+            <nazwa jezyk="francuski">Briard</nazwa>
+            <masa>35 kg</masa>
+            <wys>64 cm</wys>
+            <pochodzenie>Francja</pochodzenie>
+        </pies>
+        <pies akc="terrier">
+            <nazwaPL>Bulldog</nazwaPL>
+            <nazwa jezyk="angielski">Bull dog</nazwa>
+            <masa>25 kg</masa>
+            <wys>40 cm</wys>
+            <pochodzenie>Tybet</pochodzenie>
+        </pies>
+        <pies akc="working">
+            <nazwaPL>Polski owczarek nizinny</nazwaPL>
+            <nazwa jezyk="angielski">PON</nazwa>
+            <masa>20 kg</masa>
+            <wys>47 cm</wys>
+            <pochodzenie>Polska</pochodzenie>
+        </pies>
+        <pies akc="working">
+            <nazwaPL>Mastif tybetañski</nazwaPL>
+            <nazwa jezyk="tybetañski">Do-khyi</nazwa>
+            <masa>60 kg</masa>
+            <wys>65 cm</wys>
+            <pochodzenie>Tybet</pochodzenie>
+        </pies>
+        <pies akc="working">
+            <nazwaPL>Mastif tybetañski</nazwaPL>
+            <nazwa jezyk="tybetañski">Do-khyi</nazwa>
+            <masa>60 kg</masa>
+            <wys>65 cm</wys>
+            <pochodzenie>Tybet</pochodzenie>
+        </pies>
+        <pies akc="working">
+            <nazwaPL>Mastif tybetañski</nazwaPL>
+            <nazwa jezyk="tybetañski">Do-khyi</nazwa>
+            <masa>60 kg</masa>
+            <wys>65 cm</wys>
+            <pochodzenie>Tybet</pochodzenie>
+        </pies>
     </pieski>
     <wê¿e>
 
