@@ -1,23 +1,7 @@
 <?xml version='1.0' encoding='ISO-8859-2'?>
 
-<!DOCTYPE gatunki [
-        <!ELEMENT gatunki (pieski|węże)*>
-        <!ELEMENT pieski (pies)*>
-        <!ELEMENT pies (nazwaPL|nazwa|masa|wys|pochodzenie)*>
-        <!ATTLIST pies
-                akc CDATA #REQUIRED>
-        <!ELEMENT nazwaPL (#PCDATA)>
-        <!ELEMENT nazwa (#PCDATA)>
-        <!ATTLIST nazwa
-                jezyk CDATA #REQUIRED>
-        <!ELEMENT masa (#PCDATA)>
-        <!ELEMENT wys (#PCDATA)>
-        <!ELEMENT pochodzenie (#PCDATA)>
-        <!ELEMENT węże (#PCDATA)>
-        ]>
-
-<gatunki>
-    <pieski>
+<dzikieWensze>
+    <gatunki>
         <pies akc="working">
             <nazwaPL>Husky syberyjski</nazwaPL>
             <nazwa jezyk="angielski">Arctic Husky</nazwa>
@@ -102,29 +86,66 @@
             <wys>47 cm</wys>
             <pochodzenie>Polska</pochodzenie>
         </pies>
-        <pies akc="working">
-            <nazwaPL>Mastif tybetański</nazwaPL>
-            <nazwa jezyk="tybetański">Do-khyi</nazwa>
-            <masa>60 kg</masa>
-            <wys>65 cm</wys>
-            <pochodzenie>Tybet</pochodzenie>
+        <pies akc="herding">
+            <nazwaPL>Owczarek niemiecki</nazwaPL>
+            <nazwa jezyk="niemiecki">Schäferhund</nazwa>
+            <masa>31 kg</masa>
+            <wys>60 cm</wys>
+            <pochodzenie>Niemcy</pochodzenie>
         </pies>
-        <pies akc="working">
-            <nazwaPL>Mastif tybetański</nazwaPL>
-            <nazwa jezyk="tybetański">Do-khyi</nazwa>
-            <masa>60 kg</masa>
-            <wys>65 cm</wys>
-            <pochodzenie>Tybet</pochodzenie>
-        </pies>
-        <pies akc="working">
-            <nazwaPL>Mastif tybetański</nazwaPL>
-            <nazwa jezyk="tybetański">Do-khyi</nazwa>
-            <masa>60 kg</masa>
-            <wys>65 cm</wys>
-            <pochodzenie>Tybet</pochodzenie>
-        </pies>
-    </pieski>
-    <węże>
 
-    </węże>
-</gatunki>
+        <waz typ="dusiciel">
+            <nazwaPL>Wąż zbożowy</nazwaPL>
+            <nazwa jezyk="łacina">Pantherophis guttatus</nazwa>
+            <dlug>1.3 m</dlug>
+            <czyCieplolubny>False</czyCieplolubny>
+        </waz>
+        <waz typ="jadowity">
+            <nazwaPL>Kobra królewska</nazwaPL>
+            <nazwa jezyk="łacina">Ophiophagus hannah</nazwa>
+            <dlug>5 m</dlug>
+            <czyCieplolubny>True</czyCieplolubny>
+        </waz>
+        <waz typ="dusiciel">
+            <nazwaPL>Pyton królewski</nazwaPL>
+            <nazwa>Python regius</nazwa>
+            <dlug>1.6 m</dlug>
+            <czyCieplolubny>True</czyCieplolubny>
+        </waz>
+    </gatunki>
+
+    <pracownicy>
+        <administrator>
+            <imie>Anastazja</imie>
+            <nazwisko>Bierut</nazwisko>
+            <nick>lolzek</nick>
+        </administrator>
+        <moderator>
+            <imie>Wojtek</imie>
+            <nazwisko>Baran</nazwisko>
+            <nick>muuuuuuKA3</nick>
+            <data_rej>2007-11-08</data_rej>
+            <sekcja>węże</sekcja>
+        </moderator>
+        <administrator>
+            <imie>Baltazar</imie>
+            <nazwisko>Maczkor</nazwisko>
+            <nick>m3lchior</nick>
+            <sekcja>pieski</sekcja>
+        </administrator>
+        <moderator typ="junior">
+            <imie>Ziuta</imie>
+            <nazwisko>M.</nazwisko>
+            <nick>przewrotMajowy</nick>
+            <data_rej>2011-09-30</data_rej>
+            <sekcja>węże</sekcja>
+        </moderator>
+        <moderator typ="senior">
+            <imie>Matylka</imie>
+            <nazwisko>Ziomczek</nazwisko>
+            <nick>frIIstajle</nick>
+            <data_rej>2010-04-03</data_rej>
+            <sekcja>pieski</sekcja>
+        </moderator>
+    </pracownicy>
+</dzikieWensze>
