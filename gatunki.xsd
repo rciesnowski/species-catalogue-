@@ -1,81 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="gatunki" type="gatunkiType"/>
-  <xs:complexType name="nazwaType">
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute type="xs:string" name="jezyk" use="optional"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
+
+  <xs:element name="dzikieWensze" type="dzikieWenszeType"/>
+
   <xs:complexType name="piesType">
     <xs:sequence>
-      <xs:element name="nazwaPL">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="Husky syberyjski"/>
-            <xs:enumeration value="Yorkshire terrier"/>
-            <xs:enumeration value="Airedale terrier"/>
-            <xs:enumeration value="Szpic miniaturowy"/>
-            <xs:enumeration value="Charcik włoski"/>
-            <xs:enumeration value="Chart angielski"/>
-            <xs:enumeration value="Sznaucer miniaturowy"/>
-            <xs:enumeration value="Pinczer średni"/>
-            <xs:enumeration value="Mastif tybetański"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-      <xs:element type="nazwaType" name="nazwa"/>
-      <xs:element name="masa">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="22 kg"/>
-            <xs:enumeration value="3 kg"/>
-            <xs:enumeration value="5 kg"/>
-            <xs:enumeration value="15 kg"/>
-            <xs:enumeration value="6 kg"/>
-            <xs:enumeration value="60 kg"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-      <xs:element name="wys">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="56 cm"/>
-            <xs:enumeration value="21 cm"/>
-            <xs:enumeration value="58 cm"/>
-            <xs:enumeration value="22 cm"/>
-            <xs:enumeration value="35 cm"/>
-            <xs:enumeration value="47 cm"/>
-            <xs:enumeration value="33 cm"/>
-            <xs:enumeration value="65 cm"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-      <xs:element name="pochodzenie">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:enumeration value="Rosja"/>
-            <xs:enumeration value="Wielka Brytania"/>
-            <xs:enumeration value="Polska"/>
-            <xs:enumeration value="Włochy"/>
-            <xs:enumeration value="Niemcy"/>
-            <xs:enumeration value="Tybet"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
+      <xs:element type="nazwaType" name="nazwa" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element type="xs:string" name="masa" minOccurs="0"/>
+      <xs:element type="xs:string" name="wys" minOccurs="0"/>
+      <xs:element type="xs:string" name="pochodzenie" minOccurs="0"/>
     </xs:sequence>
     <xs:attribute type="xs:string" name="akc" use="optional"/>
   </xs:complexType>
-  <xs:complexType name="pieskiType">
+
+  <xs:complexType name="nazwaType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="jezyk" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="wazType">
     <xs:sequence>
-      <xs:element type="piesType" name="pies" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="nazwaType" name="nazwa" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="dlug">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][0-9]?(.[1-9])? m"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="czyCieplolubny">
+        <xs:simpleType>
+          <xs:restriction base="xs:boolean"/>
+        </xs:simpleType>
+      </xs:element>
     </xs:sequence>
+    <xs:attribute type="xs:string" name="typ" use="optional"/>
   </xs:complexType>
   <xs:complexType name="gatunkiType">
     <xs:sequence>
-      <xs:element type="pieskiType" name="pieski"/>
-      <xs:element type="xs:string" name="węże"/>
+      <xs:element type="piesType" name="pies" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element type="wazType" name="waz" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="administratorType">
+    <xs:sequence>
+      <xs:element name="imie">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-z]{2,8}"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="nazwisko">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z]([a-z]{2,10}|.)"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="nick">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z][a-zA-Z0-9]{2,19}"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="sekcja" maxOccurs="2" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="pieski"/>
+            <xs:enumeration value="węże"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="moderatorType">
+    <xs:complexContent>
+      <xs:extension base="administratorType">
+        <xs:sequence>
+          <xs:element name="data_rej">
+            <xs:simpleType>
+              <xs:restriction base="xs:date">
+                <xs:pattern value="20[0-2][0-9]-((0[1-9])|(1[0-2]))-(([0-2][1-9])|(3[01]))"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute type="xs:string" name="typ" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="pracownicyType">
+    <xs:choice maxOccurs="unbounded" minOccurs="1">
+      <xs:element type="administratorType" name="administrator"/>
+      <xs:element type="moderatorType" name="moderator"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="dzikieWenszeType">
+    <xs:sequence>
+      <xs:element type="gatunkiType" name="gatunki"/>
+      <xs:element type="pracownicyType" name="pracownicy"/>
     </xs:sequence>
   </xs:complexType>
 </xs:schema>
