@@ -1,125 +1,97 @@
 <?xml version='1.0' encoding='ISO-8859-2'?>
 <?xml-stylesheet type="text/css" href="gatunki.css" ?>
+<!DOCTYPE dzikieWensze SYSTEM "gatunki.dtd">
 
-<!DOCTYPE dzikieWensze [
-        <!ELEMENT dzikieWensze (gatunki, pracownicy)>
-        <!ELEMENT gatunki (pies|waz)*>
-        <!ELEMENT pies (nazwa+, masa?, wys?, pochodzenie?)>
-        <!ATTLIST pies
-                akc CDATA #IMPLIED>
-        <!ELEMENT nazwaPL (#PCDATA)>
-        <!ELEMENT nazwa (#PCDATA)>
-        <!ATTLIST nazwa
-                jezyk CDATA #REQUIRED>
-        <!ELEMENT masa (#PCDATA)>
-        <!ELEMENT wys (#PCDATA)>
-        <!ELEMENT pochodzenie (#PCDATA)>
-        <!ELEMENT waz (nazwa+,dlug,czyCieplolubny)>
-        <!ATTLIST waz
-                typ CDATA #REQUIRED>
-        <!ELEMENT dlug (#PCDATA)>
-        <!ELEMENT czyCieplolubny (#PCDATA)>
-        <!ELEMENT pracownicy (administrator|moderator)+>
-        <!ELEMENT administrator (imie,nazwisko,nick,sekcja*)>
-        <!ELEMENT imie (#PCDATA)>
-        <!ELEMENT nazwisko (#PCDATA)>
-        <!ELEMENT nick (#PCDATA)>
-        <!ELEMENT moderator (imie,nazwisko,nick,sekcja?,data_rej)>
-        <!ATTLIST moderator
-                typ CDATA #IMPLIED>
-        <!ELEMENT data_rej (#PCDATA)>
-        <!ELEMENT sekcja (#PCDATA)>
-        ]>
 
 <dzikieWensze xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="gatunki.xsd">
     <gatunki>
-        <pies>
-            <nazwa jezyk="polski">Kundel</nazwa>
+        <pies id="1">
+            <nazwa>Kundel</nazwa>
         </pies>
-        <pies akc="working">
-            <nazwa jezyk="polski">Husky syberyjski</nazwa>
+        <pies id="2" akc="working">
+            <nazwa>Husky syberyjski</nazwa>
             <nazwa jezyk="angielski">Arctic Husky</nazwa>
             <masa>22 kg</masa>
             <wys>56 cm</wys>
             <pochodzenie>Rosja</pochodzenie>
         </pies>
-        <pies akc="toy">
+        <pies id="3" akc="toy">
             <nazwa jezyk="angielski">Yorkshire terrier</nazwa>
             <masa>3 kg</masa>
             <wys>21 cm</wys>
             <pochodzenie>Wielka Brytania</pochodzenie>
         </pies>
-        <pies akc="terrier">
+        <pies id="4" akc="terrier">
             <nazwa jezyk="angielski">Airedale terrier</nazwa>
             <masa>22 kg</masa>
             <wys>58 cm</wys>
             <pochodzenie>Wielka Brytania</pochodzenie>
         </pies>
-        <pies akc="toy">
-            <nazwa jezyk="polski">Szpic miniaturowy</nazwa>
+        <pies id="5" akc="toy">
+            <nazwa>Szpic miniaturowy</nazwa>
             <nazwa jezyk="angielski">Pomeranian</nazwa>
             <masa>3 kg</masa>
             <wys>22 cm</wys>
             <pochodzenie>Polska</pochodzenie>
         </pies>
-        <pies akc="toy">
-            <nazwa jezyk="polski">Charcik włoski</nazwa>
+        <pies id="6" akc="toy">
+            <nazwa>Charcik włoski</nazwa>
             <nazwa jezyk="włoski">Piccolo Levriero Italiano</nazwa>
             <masa>5 kg</masa>
             <wys>35 cm</wys>
             <pochodzenie>Włochy</pochodzenie>
         </pies>
-        <pies akc="hound">
-            <nazwa jezyk="polski">Chart angielski</nazwa>
+        <pies id="7" akc="hound">
+            <nazwa>Chart angielski</nazwa>
             <nazwa jezyk="angielski">Whippet</nazwa>
             <masa>15 kg</masa>
             <wys>47 cm</wys>
             <pochodzenie>Wielka Brytania</pochodzenie>
         </pies>
-        <pies akc="terrie">
-            <nazwa jezyk="polski">Sznaucer miniaturowy</nazwa>
+        <pies id="8" akc="terrier">
+            <nazwa>Sznaucer miniaturowy</nazwa>
             <nazwa jezyk="niemiecki">Zwergschnauzer</nazwa>
             <masa>6 kg</masa>
             <wys>33 cm</wys>
             <pochodzenie>Niemcy</pochodzenie>
         </pies>
-        <pies akc="working">
-            <nazwa jezyk="polski">Pinczer średni</nazwa>
+        <pies id="9" akc="working">
+            <nazwa>Pinczer średni</nazwa>
             <nazwa jezyk="niemiecki">Pinscher</nazwa>
             <masa>15 kg</masa>
             <wys>47 cm</wys>
             <pochodzenie>Niemcy</pochodzenie>
         </pies>
-        <pies akc="working">
-            <nazwa jezyk="polski">Mastif tybetański</nazwa>
+        <pies id="10" akc="working">
+            <nazwa>Mastif tybetański</nazwa>
             <nazwa jezyk="tybetański">Do-khyi</nazwa>
             <masa>60 kg</masa>
             <wys>65 cm</wys>
             <pochodzenie>Tybet</pochodzenie>
         </pies>
-        <pies akc="herding">
-            <nazwa jezyk="polski">Owczarek francuski briard</nazwa>
+        <pies id="11" akc="herding">
+            <nazwa>Owczarek francuski briard</nazwa>
             <nazwa jezyk="francuski">Briard</nazwa>
             <masa>35 kg</masa>
             <wys>64 cm</wys>
             <pochodzenie>Francja</pochodzenie>
         </pies>
-        <pies akc="terrier">
-            <nazwa jezyk="polski">Bulldog</nazwa>
+        <pies id="12" akc="terrier">
+            <nazwa>Bulldog</nazwa>
             <nazwa jezyk="angielski">Bull dog</nazwa>
             <masa>25 kg</masa>
             <wys>40 cm</wys>
             <pochodzenie>Tybet</pochodzenie>
         </pies>
-        <pies akc="working">
-            <nazwa jezyk="polski">Polski owczarek nizinny</nazwa>
+        <pies id="13" akc="working">
+            <nazwa>Polski owczarek nizinny</nazwa>
             <nazwa jezyk="angielski">PON</nazwa>
             <masa>20 kg</masa>
             <wys>47 cm</wys>
             <pochodzenie>Polska</pochodzenie>
         </pies>
-        <pies akc="herding">
-            <nazwa jezyk="polski">Owczarek niemiecki</nazwa>
+        <pies id="14" akc="herding">
+            <nazwa>Owczarek niemiecki</nazwa>
             <nazwa jezyk="niemiecki">Schäferhund</nazwa>
             <masa>31 kg</masa>
             <wys>60 cm</wys>
@@ -127,19 +99,19 @@
         </pies>
 
         <waz typ="dusiciel">
-            <nazwa jezyk="polski">Wąż zbożowy</nazwa>
+            <nazwa>Wąż zbożowy</nazwa>
             <nazwa jezyk="łacina">Pantherophis guttatus</nazwa>
             <dlug>1.3 m</dlug>
             <czyCieplolubny>false</czyCieplolubny>
         </waz>
         <waz typ="jadowity">
-            <nazwa jezyk="polski">Kobra królewska</nazwa>
+            <nazwa>Kobra królewska</nazwa>
             <nazwa jezyk="łacina">Ophiophagus hannah</nazwa>
             <dlug>5 m</dlug>
             <czyCieplolubny>true</czyCieplolubny>
         </waz>
         <waz typ="dusiciel">
-            <nazwa jezyk="polski">Pyton królewski</nazwa>
+            <nazwa>Pyton królewski</nazwa>
             <nazwa jezyk="łacina">Python regius</nazwa>
             <dlug>1.6 m</dlug>
             <czyCieplolubny>true</czyCieplolubny>

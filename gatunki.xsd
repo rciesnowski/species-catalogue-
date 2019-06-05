@@ -10,13 +10,14 @@
       <xs:element type="xs:string" name="wys" minOccurs="0"/>
       <xs:element type="xs:string" name="pochodzenie" minOccurs="0"/>
     </xs:sequence>
+    <xs:attribute type="xs:int" name="id" use="required"/>
     <xs:attribute type="xs:string" name="akc" use="optional"/>
   </xs:complexType>
 
   <xs:complexType name="nazwaType">
     <xs:simpleContent>
       <xs:extension base="xs:string">
-        <xs:attribute type="xs:string" name="jezyk" use="required"/>
+        <xs:attribute type="xs:string" name="jezyk" use="optional" default="polski"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -39,6 +40,7 @@
     </xs:sequence>
     <xs:attribute type="xs:string" name="typ" use="optional"/>
   </xs:complexType>
+
   <xs:complexType name="gatunkiType">
     <xs:sequence>
       <xs:element type="piesType" name="pies" maxOccurs="unbounded" minOccurs="0"/>

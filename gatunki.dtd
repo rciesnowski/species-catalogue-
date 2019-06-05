@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='ISO-8859-2'?>
+
+
+        <!ENTITY % pc "#PCDATA">
+        <!ENTITY % inns "imie,nazwisko,nick,sekcja?">
+
+        <!ELEMENT dzikieWensze (gatunki, pracownicy)>
+            <!ELEMENT gatunki (pies|waz)*>
+                <!ELEMENT pies (nazwa+, masa?, wys?, pochodzenie?)>
+                    <!ATTLIST pies id ID #REQUIRED>
+                    <!ATTLIST pies akc (working|toy|herding|terrier|hound) #IMPLIED>
+
+                    <!ELEMENT nazwa (%pc;)>
+                        <!ATTLIST nazwa jezyk CDATA #REQUIRED>
+                    <!ELEMENT masa (%pc;)>
+                    <!ELEMENT wys (%pc;)>
+                    <!ELEMENT pochodzenie (%pc;)>
+                <!ELEMENT waz (nazwa+,dlug,czyCieplolubny)>
+                    <!ATTLIST waz typ NMTOKEN #REQUIRED>
+
+                    <!ELEMENT dlug (%pc;)>
+                    <!ELEMENT czyCieplolubny (%pc;)>
+            <!ELEMENT pracownicy (administrator|moderator)+>
+                <!ELEMENT administrator (%inns;)>
+                    <!ELEMENT imie (%pc;)>
+                    <!ELEMENT nazwisko (%pc;)>
+                    <!ELEMENT nick (%pc;)>
+                <!ELEMENT moderator (%inns;,data_rej)>
+                    <!ATTLIST moderator typ CDATA #IMPLIED>
+
+                    <!ELEMENT data_rej (%pc;)>
+                    <!ELEMENT sekcja (%pc;)>
+

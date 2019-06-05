@@ -1,0 +1,9 @@
+
+waz {
+    float: left;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    margin: 10px;
+    background-color:pink;
+}
