@@ -17,32 +17,32 @@ margin: 5%;
 pies[akc="working"] {
 background-color: white;
 border: 5px solid black;
-border-color: #E67E22;
+border-color: red;
 }
 pies[akc="toy"] {
 background-color: white;
 border: 5px solid black;
-border-color: #10069F;
+border-color: pink;
 }
 pies[akc="terrier"] {
 background-color: white;
 border: 5px solid black;
-border-color: #DB8A06;
+border-color: brown;
 }
 pies[akc="herding"] {
 background-color: white;
 border: 5px solid black;
-border-color: #F2CD00;
+border-color: lightblue;
 }
 pies[akc="hound"] {
 background-color: white;
 border: 5px solid black;
-border-color: #F93822;
+border-color: grey;
 }
 pies[id="1"] {
 background-color: white;
 border: 5px solid black;
-border-color: #84754E;
+border-color: black;
 }
 
 waz {
@@ -70,35 +70,26 @@ content: url(pies.png);
 }
 
 nazwa {
+font-family: Bahnschrift;
+color: darkblue;
 font-weight: bold;
 font-size: 40px;
 }
 
-dzikieWensze>gatunki>pies>masa {
+dzikieWensze>gatunki>pies>masa,wys,pochodzenie {
 	display: list-item;
 	list-style-type: circle;
 	font-style: italic;
-}
-dzikieWensze>gatunki>pies>wys {
-	display: list-item;
-	list-style-type: circle;
-	font-style: italic;
-}
-dzikieWensze>gatunki>pies>pochodzenie {
-	display: list-item;
-	list-style-type: circle;
-	font-style: italic;
+    font-size: 23px;
+    margin-left: 30px;
 }
 
-dzikieWensze>gatunki>waz>dlug {
+dzikieWensze>gatunki>waz>dlug,czyCieplolubny {
 	display: list-item;
 	list-style-type: circle;
 	font-style: italic;
-}
-dzikieWensze>gatunki>waz>czyCieplolubny {
-	display: list-item;
-	list-style-type: circle;
-	font-style: italic;
+    font-size: 23px;
+    margin-left: 30px;
 }
 
 dzikieWensze>gatunki>pies>nazwa {
