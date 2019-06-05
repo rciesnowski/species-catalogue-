@@ -1,15 +1,22 @@
 <?xml version='1.0' encoding='ISO-8859-2'?>
 
-
         <!ENTITY % pc "#PCDATA">
         <!ENTITY % inns "imie,nazwisko,nick,sekcja?">
+        <!ENTITY % piesek "INCLUDE">
+        <!ENTITY % kotek "IGNORE">
+
 
         <!ELEMENT dzikieWensze (gatunki, pracownicy)>
             <!ELEMENT gatunki (pies|waz)*>
-                <!ELEMENT pies (nazwa+, masa?, wys?, pochodzenie?)>
-                    <!ATTLIST pies id ID #REQUIRED>
-                    <!ATTLIST pies akc (working|toy|herding|terrier|hound) #IMPLIED>
-
+                <![%kotek; [
+                    <!ELEMENT kot (nazwa+, masa?, wys?, pochodzenie?)>
+                    <!ATTLIST kot id ID #REQUIRED>
+                ]]>
+                <![%piesek; [
+                        <!ELEMENT pies (nazwa+, masa?, wys?, pochodzenie?)>
+                        <!ATTLIST pies id ID #REQUIRED>
+                        <!ATTLIST pies akc (working|toy|herding|terrier|hound) #IMPLIED>
+                ]]>
                     <!ELEMENT nazwa (%pc;)>
                         <!ATTLIST nazwa jezyk CDATA #REQUIRED>
                     <!ELEMENT masa (%pc;)>

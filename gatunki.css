@@ -1,9 +1,10 @@
-
-waz {
-    float: left;
-    border-style: solid;
-    border-width: thin;
-    border-color: black;
-    margin: 10px;
-    background-color:pink;
+dzikieWensze {
+    background-color: aquamarine;
 }
+
+dzikieWensze>gatunki {
+    display: block;
+    padding: 20px;
+    margin: 10px;
+}
+
