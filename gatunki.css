@@ -1,10 +1,146 @@
 dzikieWensze {
-    background-color: aquamarine;
+background-color: Aquamarine;
 }
 
-dzikieWensze>gatunki {
-    display: block;
-    padding: 20px;
-    margin: 10px;
+dzikieWensze>gatunki>pies {
+display: block;
+padding: 30px;
+margin: 5%;
 }
 
+dzikieWensze>gatunki>waz {
+display: block;
+padding: 30px;
+margin: 5%;
+}
+
+pies[akc="working"] {
+background-color: white;
+border: 5px solid black;
+border-color: #E67E22;
+}
+pies[akc="toy"] {
+background-color: white;
+border: 5px solid black;
+border-color: #10069F;
+}
+pies[akc="terrier"] {
+background-color: white;
+border: 5px solid black;
+border-color: #DB8A06;
+}
+pies[akc="herding"] {
+background-color: white;
+border: 5px solid black;
+border-color: #F2CD00;
+}
+pies[akc="hound"] {
+background-color: white;
+border: 5px solid black;
+border-color: #F93822;
+}
+pies[id="1"] {
+background-color: white;
+border: 5px solid black;
+border-color: #84754E;
+}
+
+waz {
+background-color: white;
+border: 5px solid black;
+border-color: black;
+}
+
+waz[typ="jadowity"]:hover {
+background-color: red;
+transition-duration:4s; 
+}
+
+waz[typ="dusiciel"]:hover {
+background-color: #6399AE;
+transition-duration:4s; 
+}
+
+waz:before {
+content: url(weze.png);
+}
+
+pies:before {
+content: url(pies.png);
+}
+
+nazwa {
+font-weight: bold;
+font-size: 40px;
+}
+
+dzikieWensze>gatunki>pies>masa {
+	display: list-item;
+	list-style-type: circle;
+	font-style: italic;
+}
+dzikieWensze>gatunki>pies>wys {
+	display: list-item;
+	list-style-type: circle;
+	font-style: italic;
+}
+dzikieWensze>gatunki>pies>pochodzenie {
+	display: list-item;
+	list-style-type: circle;
+	font-style: italic;
+}
+
+dzikieWensze>gatunki>waz>dlug {
+	display: list-item;
+	list-style-type: circle;
+	font-style: italic;
+}
+dzikieWensze>gatunki>waz>czyCieplolubny {
+	display: list-item;
+	list-style-type: circle;
+	font-style: italic;
+}
+
+dzikieWensze>gatunki>pies>nazwa {
+text-shadow: -5px 0 pink, 0 5px pink,
+      5px 0 pink, 0 -5px pink;
+}
+
+waz>czyCieplolubny:before {
+content: "Czy jest cieplolubny: ";
+}
+
+dzikieWensze>pracownicy>administrator {
+    display: inline-table;
+    padding: 30px;
+    margin: 2%;
+}
+dzikieWensze>pracownicy>moderator {
+    display: inline-table;
+    padding: 30px;
+    margin: 2%;
+}
+moderator {
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    border: 5px solid whitesmoke;
+}
+administrator {
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border: 5px solid whitesmoke;
+}
+dzikieWensze>pracownicy>moderator>imie,nazwisko,nick,data_rej,sekcja {
+    display: list-item;
+    list-style-type: disk;
+    font-style: italic;
+    color: whitesmoke;
+}
+dzikieWensze>pracownicy>administrator>imie,nazwisko,nick,sekcja {
+    display: list-item;
+    list-style-type: disk;
+    font-style: italic;
+    color: whitesmoke;
+}
